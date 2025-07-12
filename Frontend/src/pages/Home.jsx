@@ -6,6 +6,9 @@ import Display from '../components/DIsplay';
 // import { Movie } from '..';
 
 
+const fallbackImage = "https://via.placeholder.com/300x450?text=No+Image";
+
+
 const Home = () => {
 
 
@@ -54,7 +57,7 @@ const Home = () => {
                                 key={movie._id}
                                 title={movie.title}
                                 description={`${movie.release_date} ${movie.genres}`}
-                                src="https://imgs.search.brave.com/kFdmmW_MKtrNxu9vgsUtKnuQjFu_myT5mFJmTn8aHGY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS81MTgv/dGh1bWJiaWctNTE4/NzgzLndlYnA"
+                                src={movie.poster_path || fallbackImage}
                             />
                         ))}
                 </div>
@@ -73,7 +76,7 @@ const Home = () => {
                                 key={movie._id}
                                 title={movie.title}
                                 description={`${movie.release_date} ${movie.genres}`}
-                                src="https://imgs.search.brave.com/kFdmmW_MKtrNxu9vgsUtKnuQjFu_myT5mFJmTn8aHGY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS81MTgv/dGh1bWJiaWctNTE4/NzgzLndlYnA"
+                                src={movie.poster_path || fallbackImage}
                             />
                         ))}
                 </div>
