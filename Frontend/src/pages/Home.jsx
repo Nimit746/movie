@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import Searchbar from '../components/Searchbar'
-import Display from '../components/DIsplay';
 // import { Movie } from '..';
 
 
