@@ -17,7 +17,7 @@ const Home = () => {
 
 
     const fetchdata = async () => {
-        const res = await fetch('http://localhost:3000/');
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/`);
         const data = await res.json();
         if (data.success) {
             console.log('Data fetched successfully\n');

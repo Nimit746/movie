@@ -32,7 +32,7 @@ const Searchbar = () => {
 
         const fetchres = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/api/movies/search?title=${debouncedQuery}`)
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/movies/search?title=${debouncedQuery}`)
                 setResult(res.data);
             } catch (err) {
                 console.error('Search Failed: ', err)

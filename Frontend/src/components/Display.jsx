@@ -75,7 +75,7 @@ const Display = ({ heading, btn }) => {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const res = await axios.get(`http://localhost:3000/api/movies?genre=${heading}&limit=5`);
+            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/movies?genre=${heading}&limit=5`);
             setMovies(res.data);
         };
         fetchMovies();
@@ -84,7 +84,7 @@ const Display = ({ heading, btn }) => {
 
 
     const fetchMov = async () => {
-        let r = await fetch('http://localhost:3000/');
+        let r = await fetch(`${import.meta.env.VITE_API_BASE_URL}/`);
         const res = await r.json();
         if (res.data) {
             setMovies1(res.data);
