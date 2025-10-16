@@ -40,7 +40,7 @@
 
 
 import React, { useEffect } from 'react';
-import Display from '../components/DIsplay';
+import Display from '../components/Display';
 
 const Movies = () => {
   useEffect(() => {
